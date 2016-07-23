@@ -1,0 +1,714 @@
+body,ul,li,h3{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-family: "微软雅黑",Arial;
+}
+a{
+    text-decoration: none;
+}
+.nav-box{
+    height:44px;
+    background: #000000;
+    opacity: 0.8;
+    position: relative;
+    z-index: 666;
+}
+.max-nav{
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.max-nav:after{
+    content: "";
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width:100%;
+}
+.nav-box .max-nav li{
+    line-height: 44px;
+    height:100%;
+    display: inline-block;
+}
+.nav-box .max-nav li a{
+    height: 100%;
+    font-size:16px;
+    z-index: 1;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+.nav-box .max-nav li a:hover{
+    color: #bbbbbb;
+}
+.min-nav{
+   width: 100%;
+   height: 100%;
+}
+.min-nav .nav{
+    height: 100%;
+    margin: 0 auto;
+    line-height: 44px;
+    text-align: justify;
+}
+.min-nav .nav:after{
+    content: "";
+    display: inline-block;
+    width:100%;
+    line-height: 0;
+    height: 0;
+}
+.min-nav .nav>div{
+    display: inline-block;
+    font-size:16px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.min-nav .nav .menu{
+    width: 42px;
+    height:42px;
+    line-height: 44px;
+    cursor: pointer;
+}
+.min-nav .nav .menu span{
+    width: 70%;
+    display: inline-block;
+    height: 0;
+    border-top: 1px solid #ffffff;
+    margin-top:14px;
+    margin-left: 3px;
+    margin-right: 3px;
+    float: left;
+    transition: all 0.3s;
+}
+.min-nav .nav .menu#active span:nth-child(1){
+    transform: translateY(7px) rotate(135deg);
+}
+.min-nav .nav .menu#active span:nth-child(2){
+    transform: translateY(-7px) rotate(45deg);
+}
+.nav-box .min-nav .lists{
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 40px;
+    background: #000000!important;
+    display: none;
+    transition: all 0.3s;
+}
+.nav-box .lists li{
+    height: 48px;
+    width: 80%;
+    border-bottom: 1px solid #ffffff;
+}
+.nav-box .lists li a{
+    width: 100%;
+    height:100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 48px;
+    transition: all 0.3s;
+}
+.nav-box .lists li:nth-last-child(1) a{
+    font-size: 18px;
+}
+.nav-box .lists li:hover a{
+    color: #bbbbbb;
+}
+@media screen and (max-width: 768px) {
+    .nav-box .max-nav{
+        display: none;
+    }
+    .nav-box .min-nav{
+        height: 100%;
+        background: #000000;
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+    .nav-box .max-nav{
+        display: block;
+    }
+    .nav-box .min-nav{
+        display: none;
+    }
+}
+/*第二部分*/
+.container-fluid:nth-child(2){
+    margin-right: 0!important;
+    margin-left: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.container-fluid:nth-child(2) .row{
+    margin-right: 0!important;
+    margin-left: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.banner-box{
+    width: 100%;
+    height:588px;
+    overflow: hidden;
+}
+.banner-box .row{
+    width:100%;
+    height: 100%;
+    background: #ffffff!important;
+    position: relative;
+}
+.banner-box  .row  div{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.banner-box  .row >div  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin:auto;
+}
+.banner-box  .row a span{
+    display: inline-block;
+    position: absolute;
+}
+.banner-box  .row a span:nth-child(1){
+    width: auto;
+    height: 47px;
+    top:40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.banner-box  .row a span:nth-child(2){
+    width: auto;
+    height:42px;
+    font-size: 25px;
+    text-align: center;
+    color: #333333;
+    top:90px;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+@media all and (min-width: 768px) {
+    .banner-box  .row div:nth-child(1) a:nth-child(1){
+        background: url("../images/iphone_6s_medium.jpg") bottom no-repeat;
+    }
+    .banner-box  .row div:nth-child(2) a:nth-child(1){
+        background: url("../images/ipad_pro_family_medium.jpg")  no-repeat;
+        background-position: 0px  200px;
+    }
+    .banner-box  .row div:nth-child(3) a:nth-child(1){
+        margin-bottom: 100px;
+        background: url("../images/apple_watch_trio_medium.jpg") bottom no-repeat;
+    }
+    .banner-box  .row div:nth-child(4) a:nth-child(1){
+        background-size: contain;
+        margin-bottom: 100px;
+        background: url("../images/macbook_medium.png") bottom no-repeat;
+    }
+    .banner-box  .row div:nth-child(1) a:nth-child(1) span:nth-child(1){
+        background: url("../images/iphone_6s_medium.png") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(2) a:nth-child(1) span:nth-child(1){
+        background: url("../images/ipad_pro_medium.png") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(3) a:nth-child(1) span:nth-child(1){
+        background: url("../images/watch_medium.png") center no-repeat;
+    }.banner-box  .row div:nth-child(4) a:nth-child(1) span:nth-child(1){
+             background: url("../images/mac.png") center no-repeat;
+     }
+    .banner-box  .row a span:nth-child(2){
+        width: auto;
+        height:42px;
+        font-size: 25px;
+        text-align: center;
+        color: #333333;
+        top:90px;
+        left:0;
+        right: 0;
+        margin: auto;
+    }
+}
+@media all and (max-width: 768px) {
+    .banner-box  .row div:nth-child(1) a:nth-child(1){
+        z-index: 33;
+        background: url("../images/iphone_6s_small.jpg") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(2) a:nth-child(1){
+        background: url("../images/ipad_pro_family_small.jpg") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(3) a:nth-child(1){
+        background: url("../images/apple_watch_trio_small.jpg") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(4) a:nth-child(1){
+        background: url("../images/macbook_small.png") center no-repeat;
+
+    }
+    .banner-box  .row div:nth-child(1) a:nth-child(1) span:nth-child(1){
+        background: url("../images/iphone_6s_medium.png") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(2) a:nth-child(1) span:nth-child(1){
+        background: url("../images/ipad_pro_medium.png") center no-repeat;
+    }
+    .banner-box  .row div:nth-child(3) a:nth-child(1) span:nth-child(1){
+        background: url("../images/watch_medium.png") center no-repeat;
+    }.banner-box  .row div:nth-child(4) a:nth-child(1) span:nth-child(1){
+         background: url("../images/mac.png") center no-repeat;
+     }
+    .banner-box  .row a span:nth-child(2){
+        width: auto;
+        height:42px;
+        font-size: 20px;
+        text-align: center;
+        color: #333333;
+        top:90px;
+        left:0;
+        right: 0;
+        margin: auto;
+    }
+}
+.banner-box .btnbox{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 10px;
+    margin: auto;
+    z-index: 666;
+}
+.banner-box  .btnbox li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cccccc;
+    margin-right: 5px;
+    display: inline-block;
+    z-index: 6666;
+}
+.banner-box #active{
+    border:1px solid blue;
+}
+.banner-box  .btn{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top:45%;
+    left: 0;
+    z-index: 667;
+    line-height: 0;
+}
+.banner-box  .btn .left{
+    width: 32px;
+    height: 72px;
+    margin-left: 30px;
+    background: url("../images/next.png");
+    transform: rotate(-180deg);
+    float: left;
+    cursor: pointer;
+    display: none;
+}
+.banner-box .btn .right{
+    width: 32px;
+    height: 72px;
+    margin-right: 30px;
+    background: url("../images/next.png");
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+/*第三部分*/
+.container-fluid:nth-child(3){
+    height: 200px;
+}
+.container-fluid:nth-child(3) .row >div{
+    height:200px;
+}
+.container-fluid:nth-child(3) .row:nth-child(1) >div >a{
+    width:100%;
+    box-sizing: border-box;
+    height:100%;
+    border-right: 2px solid #ffffff;
+    display: block;
+}
+@media screen and (min-width:1024px){
+    .container-fluid:nth-child(3) div:nth-child(1)>a{
+        background: url("../images/hp_tiles_ipad_large.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(2) a{
+        background: url("../images/tradeup_large.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(3) a{
+        background: url("../images/accessories_large.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(4) a{
+        background: url("../images/teaser_large.jpg") center;
+        border-right: 0px solid red;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .container-fluid:nth-child(3) div:nth-child(1) a{
+        background: url("../images/hp_tiles_ipad_medium.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(2) a{
+        background: url("../images/tradeup_medium.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(3) a{
+        background: url("../images/accessories_medium.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(4) a{
+        background: url("../images/teaser_medium.jpg") center;
+        border-right: 0px solid red;
+    }
+}
+@media screen and (max-width: 768px){
+    .container-fluid:nth-child(3) div:nth-child(1) a{
+        background: url("../images/hp_tiles_ipad_small.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(2) a{
+        background: url("../images/tradeup_small.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(3) a{
+        background: url("../images/accessories_small.jpg") center;
+    }
+    .container-fluid:nth-child(3) div:nth-child(4) a{
+        background: url("../images/teaser_small.jpg") center;
+    }
+}
+/*第四部分*/
+/* 链接开始 */
+.link{
+    background: #f2f2f2;
+}
+.link .main-link .row{
+    width: 100%;
+    height: 100%;
+}
+/* 链接结束 */
+/* 底部开始 */
+.footer{
+    background: #f2f2f2;
+    overflow: hidden;
+}
+.footer ul li{
+    display: inline-block;
+    color: #999;
+    font-size: 10px;
+}
+.footer ul:nth-child(1) a{
+    color: #08c;
+}
+.footer ul:nth-child(1) a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+.footer ul:last-child a{
+    color: #999;
+}
+.footer ul:last-child a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* pc */
+/* 底部开始 */
+.footer .max-footer{
+    max-width: 980px;
+    height: auto;
+    padding: 20px 0 24px;
+    margin: 0 auto;
+}
+.footer .max-footer ul:nth-child(1){
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li{
+    padding: 0 8px;
+    color: #d6d6d6;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li a{
+    color: #666;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li:last-child a{
+    color: #666;
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    background: url("../images/china.png") no-repeat;
+    padding-left: 21px;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+.footer .max-footer ul:nth-child(2) li:last-child{
+    float: right;
+    vertical-align: middle;
+}
+/* pc底部结束 */
+
+
+/* 手机 */
+.footer .min-footer{
+    min-width: 440px;
+    height: auto;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.footer .min-footer ul:nth-child(2){
+    padding: 10px 0;
+}
+.footer .min-footer ul:nth-child(2) li{
+    vertical-align: middle;
+}
+.footer .min-footer ul:nth-child(2) a{
+    color: #666;
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    background: url("../images/china.png") no-repeat;
+    padding-left: 21px;
+}
+.footer .min-footer ul:nth-child(2) a:hover{
+    text-decoration: underline;
+}
+.footer .min-footer ul:nth-child(4) li{
+    padding: 0 8px;
+    color: #d6d6d6;
+}
+.footer .min-footer ul:nth-child(4) li:nth-child(1){
+    padding-left: 0;
+}
+.footer .min-footer ul:nth-child(4) li a{
+    color: #777;
+}
+.footer .min-footer ul:nth-child(4) li a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+/* 手机底部结束 */
+/* 底部结束 */
+
+
+
+/* 手机 */
+@media screen and (max-width: 768px) {
+    /* 友情链接开始 */
+    .link{
+        background: #f2f2f2;
+    }
+    .link .main-link .row{
+        margin-left: 0!important;
+    }
+    .link .main-link .row .cols{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        margin-right: -30px;
+    }
+    .link .main-link .row h3{
+        width: 100%;
+        font-size: 13px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #e3e3e3;
+        margin-right: -100px;
+        position: relative;
+        opacity: 0.7;
+    }
+    .link .main-link .row h3 a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #111;
+    }
+    .link .main-link .row h3:hover{
+        opacity: 0.8;
+    }
+    .link .main-link .row h3:after{
+        content: "+";
+        position: absolute;
+        right: 0;
+        top:0;
+        cursor: pointer;
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+
+    }
+
+    .link .main-link .row ul{
+        display: none;
+    }
+    .link .main-link .row ul li{
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        opacity: 0.7;
+    }
+    .link .main-link .row ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #111;
+    }
+    .link .main-link .row ul li a:hover{
+        text-decoration: underline;
+        opacity: 0.8;
+    }
+    /* 友情链接结束 */
+
+    /* 底部开始 */
+    .footer .max-footer{
+        display: none;
+    }
+    .footer .min-footer{
+        display: block;
+    }
+    /* 底部结束 */
+}
+
+
+/* 平板 */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    /* 友情链接开始 */
+    .link{
+        height: 260px;
+    }
+    .link .main-link{
+        max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 32px 22px 20px;
+        box-sizing: border-box;
+    }
+    .link .main-link .row{
+        width: 100%;
+        height: 100%;
+        margin: 0!important;
+        line-height: 20px;
+    }
+    .link .main-link .row h3{
+        height: 20px;
+        font-size: 11px;
+        opacity: 0.9;
+    }
+    .link .main-link .row h3 a{
+        color: #111;
+    }
+    .link .main-link .row ul li{
+        height: 20px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .link .main-link .row ul li a{
+        color: #111;
+        opacity: 0.6;
+    }
+    .link .main-link .row ul li a:hover{
+        text-decoration: underline;
+        opacity: 0.8;
+    }
+    .link .main-link .row h3:nth-of-type(2){
+        margin-top: 20px;
+    }
+    /* 友情链接结束 */
+
+    /* 底部开始 */
+    .footer .max-footer{
+        display: block;
+    }
+    .footer .min-footer{
+        display: none;
+    }
+    /* 底部结束 */
+}
+
+
+/* pc */
+@media screen and (min-width: 1024px) {
+    /* 友情链接开始 */
+    .link{
+        height: 260px;
+    }
+    .link .main-link{
+        max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 32px 22px 20px;
+        box-sizing: border-box;
+    }
+    .link .main-link .row{
+        width: 100%;
+        height: 100%;
+        margin: 0!important;
+        line-height: 20px;
+    }
+    .link .main-link .row h3{
+        height: 20px;
+        font-size: 11px;
+        opacity: 0.9;
+    }
+    .link .main-link .row h3 a{
+        color: #111;
+    }
+    .link .main-link .row ul li{
+        height: 20px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .link .main-link .row ul li a{
+        color: #111;
+        opacity: 0.6;
+    }
+    .link .main-link .row ul li a:hover{
+        text-decoration: underline;
+        opacity: 0.8;
+    }
+    .link .main-link .row h3:nth-of-type(2){
+        margin-top: 20px;
+    }
+    /* 友情链接结束 */
+
+    /* 底部开始 */
+    .footer .max-footer{
+        display: block;
+    }
+    .footer .min-footer{
+        display: none;
+    }
+    /* 底部结束 */
+}
+
+
+
+
+
+
+/* 小屏头部动画 */
+.header .min-nav .nav .menu#active span:nth-child(1){
+    transform: translateY(4px) rotate(45deg);
+}
+.header .min-nav .nav .menu#active span:nth-child(2){
+    transform: translateY(-4px) rotate(135deg);
+}
+
+/* 小屏链接动画 */
+.link .main-link .row .cols ul#active{
+    display: block;
+}
+.link .main-link .row  .cols h3#active:after{
+    transform: rotate(-45deg);
+}
